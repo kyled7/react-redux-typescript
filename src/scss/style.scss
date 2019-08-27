@@ -4,6 +4,9 @@
 // Spinkit
 $spinkit-spinner-color: $body-color;
 @import '~spinkit/scss/spinkit.scss';
+.app-body > div {
+  width: 100%;
+}
 .dropdown-menu.dropdown-menu-right.show {
   position: absolute;
   will-change: transform;

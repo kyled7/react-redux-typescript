@@ -1,11 +1,14 @@
 import React, { Component } from "react";
+import Container from '../../Components/CommonParts/Container';
 
 class Homepage extends Component {
   render() {
     return (
-      <div className="App">
+      <Container
+        pageTitle="Home"
+      >
         <p>Homepage</p>
-      </div>
+      </Container>
     );
   }
 }

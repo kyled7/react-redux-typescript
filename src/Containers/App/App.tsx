@@ -1,6 +1,5 @@
 import React, {Component, Suspense} from 'react';
 import { HashRouter } from 'react-router-dom';
-import { Container } from 'reactstrap';
 import {
   AppFooter,
   AppHeader,
@@ -12,14 +11,13 @@ import {
   AppSidebarNav,
   // @ts-ignore
 } from '@coreui/react';
-import PickersHeader from '../../Components/DefaultLayout/PickersHeader';
 import DefaultFooter from '../../Components/DefaultLayout/DefaultFooter';
 import DefaultHeader from '../../Components/DefaultLayout/DefaultHeader';
 
 import Routes from "./AppRoutes";
 import "./App.scss";
 
-export default class App extends Component {
+class App extends Component {
   private menuItems = [
     {
       name: 'Homepage',
@@ -55,18 +53,7 @@ export default class App extends Component {
               <AppSidebarFooter/>
               <AppSidebarMinimizer/>
             </AppSidebar>
-            <main className="main">
-              <Suspense fallback={this.loading()}>
-                <nav>
-                  <PickersHeader/>
-                </nav>
-              </Suspense>
-              <Container fluid>
-                <Suspense fallback={this.loading()}>
-                  <Routes />
-                </Suspense>
-              </Container>
-            </main>
+            <Routes />
           </div>
           <AppFooter>
             <Suspense fallback={this.loading()}>
@@ -78,3 +65,5 @@ export default class App extends Component {
     );
   }
 }
+
+export default App;
