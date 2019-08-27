@@ -1,19 +1,11 @@
+
 // Import styles with default layout.
-@import "~@coreui/coreui-pro/scss/coreui.scss";
+@import "~@coreui/coreui/scss/coreui.scss";
 
 // Spinkit
 $spinkit-spinner-color: $body-color;
+// $spinkit-spinner-color: $body-color;
 @import '~spinkit/scss/spinkit.scss';
-.app-body > div {
-  width: 100%;
-}
-.dropdown-menu.dropdown-menu-right.show {
-  position: absolute;
-  will-change: transform;
-  top: 0px;
-  left: 0px;
-  transform: translate3d(-132px, 35px, 0px);
-}
 
 .navbar-brand {
   margin-left: auto;
@@ -53,22 +45,6 @@ $spinkit-spinner-color: $body-color;
   }
 }
 
-.campaign-picker {
-  .selected-account {
-    display: none;
-    @media (min-width: 1200px) {
-      display: inline;
-    }
-  }
-  li {
-    margin-right: 0.25rem;
-    a {
-      padding: 0.4rem 1rem;
-      margin-top: 1px;
-    }
-  }
-}
-
 .Toastify__toast--default {
   color: #555 !important;
 }
@@ -97,47 +73,5 @@ audio.recorded-audio {
   img {
     width: 100%;
     height: 100%;
-  }
-}
-
-@keyframes r1 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.operation-panel {
-  padding: 1rem 1.25rem 0.25rem;
-  background-color: #f0f0f0;
-  border-top: 3px solid #e0e0e0;
-  border-bottom: 1px solid #c8ced3;
-
-  label {
-    white-space: nowrap;
-  }
-
-  .form-group {
-    & > label {
-      margin-bottom: 0.25rem;
-      padding-bottom: 0.1rem;
-      display: block;
-      border-bottom: 1px solid #c8ced3;
-      color: #1b8eb7;
-    }
-
-    & > ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-
-      li {
-        margin-right: 1rem;
-        margin-bottom: 0.5rem;
-        display: inline-block;
-      }
-    }
   }
 }

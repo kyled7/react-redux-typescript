@@ -5,12 +5,12 @@ export interface Props {
   pageTitle: string
 }
 
-const Breadcrumbs: FunctionComponent<any> = (props) => {
-    return (
-      <Breadcrumb>
-            <Breadcrumb.Item active>{props.pageTitle}</Breadcrumb.Item>
-      </Breadcrumb>
-    )
+const Breadcrumbs: FunctionComponent<Props> = (props) => {
+  return (
+    <Breadcrumb>
+      <Breadcrumb.Item active>{props.pageTitle}</Breadcrumb.Item>
+    </Breadcrumb>
+  )
 }
 
 export default Breadcrumbs;

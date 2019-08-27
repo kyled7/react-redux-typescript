@@ -10,9 +10,9 @@ export interface Props {
 const ContainerComponent: FunctionComponent<Props> = props => {
   return (
     <main className="main">
-        <nav>
-          <BreadCrumb pageTitle={props.pageTitle}/>
-        </nav>
+      <nav>
+        <BreadCrumb pageTitle={props.pageTitle}/>
+      </nav>
       <Container fluid>
           {props.children}
       </Container>

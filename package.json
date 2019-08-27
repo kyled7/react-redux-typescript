@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@coreui/coreui-pro": "^2.1.14",
+    "@coreui/coreui": "^2.1.12",
     "@coreui/icons": "^0.3.0",
     "@coreui/react": "^2.5.2",
     "@types/jest": "24.0.15",
