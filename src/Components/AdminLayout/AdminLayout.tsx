@@ -11,10 +11,10 @@ import {
   AppSidebarNav,
   // @ts-ignore
 } from '@coreui/react';
-import DefaultFooter from './DefaultFooter';
-import DefaultHeader from './DefaultHeader';
+import DefaultFooter from './AdminFooter';
+import DefaultHeader from './AdminHeader';
 
-import routes from '../../Containers/App/AppRoutes';
+import { routes } from '../../Containers/App';
 
 export class DefaultLayout extends Component {
   private navigation = [

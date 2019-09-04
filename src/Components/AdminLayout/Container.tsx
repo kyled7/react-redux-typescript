@@ -1,6 +1,6 @@
 import React, { FunctionComponent, ReactNode } from 'react';
 import Container from 'react-bootstrap/Container';
-import BreadCrumb from '../DefaultLayout/DefaultBreadcrumb';
+import BreadCrumb from './AdminBreadcrumb';
 
 export interface Props {
   children: ReactNode,

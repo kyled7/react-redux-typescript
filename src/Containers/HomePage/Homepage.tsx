@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Container from '../../Components/CommonParts/Container';
+import { Container } from '../../Components/AdminLayout';
 
 class Homepage extends Component {
   render() {
