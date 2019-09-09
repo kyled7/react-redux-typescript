@@ -1,4 +1,4 @@
-import React, {Component, Suspense} from 'react';
+import React, { Component, Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import {
   AppFooter,
@@ -11,20 +11,12 @@ import {
   AppSidebarNav,
   // @ts-ignore
 } from '@coreui/react';
-import DefaultFooter from './AdminFooter';
-import DefaultHeader from './AdminHeader';
 
-import { routes } from '../../Containers/App';
+import { AdminFooter, AdminHeader } from '../../Components/AdminLayout';
+import routes from './AdminRoutes';
+import navigation from './AdminNavigation';
 
-export class DefaultLayout extends Component {
-  private navigation = [
-    {
-      name: 'Homepage',
-      url: '/home',
-      icon: 'icon-speedometer',
-    }
-  ];
-
+class AdminLayoutComponent extends Component {
   loading() {
     return (
       <div className="animated fadeIn pt-1 text-center">
@@ -38,7 +30,7 @@ export class DefaultLayout extends Component {
       <div className="app">
         <AppHeader fixed>
           <Suspense fallback={this.loading()}>
-            <DefaultHeader/>
+            <AdminHeader/>
           </Suspense>
         </AppHeader>
         <div className="app-body">
@@ -46,7 +38,7 @@ export class DefaultLayout extends Component {
             <AppSidebarHeader/>
             <AppSidebarForm/>
             <Suspense fallback={this.loading()}>
-              <AppSidebarNav navConfig={{items: this.navigation}} {...this.props} />
+              <AppSidebarNav navConfig={{items: navigation}} {...this.props} />
             </Suspense>
             <AppSidebarFooter/>
             <AppSidebarMinimizer/>
@@ -65,12 +57,12 @@ export class DefaultLayout extends Component {
                   : (null);
               },
             )}
-            <Redirect from="/" to="/home" />
+            <Redirect from="/" to="/admin" />
           </Switch>
         </div>
         <AppFooter>
           <Suspense fallback={this.loading()}>
-            <DefaultFooter/>
+            <AdminFooter/>
           </Suspense>
         </AppFooter>
       </div>
@@ -78,4 +70,4 @@ export class DefaultLayout extends Component {
   }
 }
 
-export default DefaultLayout
+export default AdminLayoutComponent;

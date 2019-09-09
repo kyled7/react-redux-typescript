@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-import { Container } from '../../Components/AdminLayout';
+import Header from "../../Components/Header";
 
 class Homepage extends Component {
   render() {
     return (
-      <Container
-        pageTitle="Home"
-      >
+      <div>
+        <Header
+          pageTitle="Home"
+        />
         <p>Homepage</p>
-      </Container>
+      </div>
     );
   }
 }

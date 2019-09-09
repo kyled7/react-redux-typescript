@@ -1,7 +1,9 @@
-import AdminLayout from './AdminLayout';
 import Container from './Container';
+import AdminFooter from './AdminFooter';
+import AdminHeader from './AdminHeader';
 
 export {
-  AdminLayout,
-  Container
-}
+  Container,
+  AdminFooter,
+  AdminHeader
+};
