@@ -3,7 +3,7 @@ import TodoListComponent, { TodoList } from "./TodoList";
 import TodoFormComponent from "./TodoForm";
 import { Row, Button } from "react-bootstrap";
 import TodoFilterComponent from "./TodoFilter";
-import { Container } from '../AdminLayout';
+import Container from '../AdminLayout';
 
 export interface Props {
   filter: string;
